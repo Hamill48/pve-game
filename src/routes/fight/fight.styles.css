@@ -1,0 +1,47 @@
+.fight-route-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(105, 105, 105);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: absolute;
+}
+
+.user-fight-image-container {
+    width: 150px;
+    height: 150px;
+    background-color: #fae5c5;
+    border-radius: 10px;
+}
+
+.character-fight-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.monster-fight-container, .user-fight-container {
+    width: 150px;
+    height: 200px;
+    border: 1px solid #d9b638;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.monster-fight-image, .monster-fight-reverse-image{
+    width: 150px;
+    border-radius: 10px;
+}
+
+
+.monster-fight-reverse-image {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}

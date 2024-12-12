@@ -1,0 +1,15 @@
+.input-label {
+    color: #d9b638;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.input-component {
+    min-width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}

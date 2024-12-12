@@ -1,0 +1,22 @@
+.primary {
+    min-width: 170px;
+    min-height: 50px;
+    border: none;
+    background-color: #0c3b54;
+    color: #d9b638;
+    border-radius: 10px;
+}
+
+.primary:hover, .selector:hover {
+    cursor: pointer;
+    background-color: hsl(201, 75%, 15%);
+}
+
+.selector {
+    min-width: 100px;
+    min-height: 50px;
+    border: none;
+    background-color: #0c3b54;
+    color: #d9b638;
+    border-radius: 10px;
+}

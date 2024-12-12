@@ -1,0 +1,21 @@
+.health-bar-container {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border: 1px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+.health-bar {
+  height: 15px;
+  background-color: red;
+  transition: width 0.3s ease; /* Animáció a változásokra */
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

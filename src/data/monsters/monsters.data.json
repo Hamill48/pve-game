@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Ogre",
+        "image": "images/ogre.jpg",
+        "attack": 10,
+        "health": 20,
+        "award": 5,
+        "weapon": "images/ogre-weapon.png"
+    },
+    {
+        "id": 2,
+        "name": "Witch",
+        "image": "images/witch.jpg",
+        "attack": 30,
+        "health": 60,
+        "award": 10,
+        "weapon": "images/witch-weapon.png" 
+    },
+    {
+        "id": 3,
+        "name": "Dragon",
+        "image": "images/dragon.jpg",
+        "attack": 50,
+        "health": 100,
+        "award": 15,
+        "weapon": "images/dragon-weapon.png"  
+    }
+]

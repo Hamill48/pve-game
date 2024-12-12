@@ -1,0 +1,25 @@
+.invetory-container {
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #d9b638;
+    border-radius: 10px;
+}
+
+.weapon-inventory, .shield-inventory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-route-img {
+    margin-bottom: 10px;
+}
+
+.weapon-image, .shield-image {
+    width: 100px;
+}

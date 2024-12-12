@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "image": "images/sword1.png",
+        "damage": 5,
+        "price": 0
+    },
+    {
+        "id": 2,
+        "image": "images/sword2.png",
+        "damage": 15,
+        "price": 10
+    },
+    {
+        "id": 3,
+        "image": "images/sword3.png",
+        "damage": 20,
+        "price": 20
+    }
+]
