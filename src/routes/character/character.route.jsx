@@ -67,28 +67,28 @@ const CharacterRoute = () => {
                 <div className="weapon-shop">
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <img className="weapon-image" src={weaponsData[1].image}/>
-                        <p>Sebzés: 10</p>
-                        <p style={{marginTop: '-10px'}}>Ár: 10 arany</p>
+                        <p>Sebzés: {weaponsData[1].damage}</p>
+                        <p style={{marginTop: '-10px'}}>Ár: {weaponsData[1].price} arany</p>
                         <Button style="selector" title="vásárlás" onClickHandler={() => {buyWeapon(2, 10)}}/>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <img className="weapon-image" src={weaponsData[2].image}/>
-                        <p>Sebzés: 15</p>
-                        <p style={{marginTop: '-10px'}}>Ár: 20 arany</p>
+                        <p>Sebzés: {weaponsData[2].damage}</p>
+                        <p style={{marginTop: '-10px'}}>Ár: {weaponsData[2].price}</p>
                         <Button style="selector" title="vásárlás" onClickHandler={() => {buyWeapon(3, 20)}}/>
                     </div>
                 </div>
                 <div className="shield-shop">
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <img className="shield-image" src={shieldsData[1].image}/>
-                        <p>Védelem: 10</p>
-                        <p style={{marginTop: '-10px'}}>Ár: 20 arany</p>
+                        <p>Védelem: {shieldsData[1].protection}</p>
+                        <p style={{marginTop: '-10px'}}>Ár: {shieldsData[1].price}</p>
                         <Button style="selector" title="vásárlás" onClickHandler={() => {buyShield(2, 20)}}/>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <img className="shield-image" src={shieldsData[2].image}/>
-                        <p>Védelem: 15</p>
-                        <p style={{marginTop: '-10px'}}>Ár: 30 arany</p>
+                        <p>Védelem: {shieldsData[2].protection}</p>
+                        <p style={{marginTop: '-10px'}}>Ár: {shieldsData[2].price}</p>
                         <Button style="selector" title="vásárlás" onClickHandler={() => {buyShield(3, 30)}}/>
                     </div>
                 </div>

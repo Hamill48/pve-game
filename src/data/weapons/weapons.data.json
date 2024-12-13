@@ -3,18 +3,21 @@
         "id": 1,
         "image": "images/sword1.png",
         "damage": 5,
-        "price": 0
+        "price": 0,
+        "sound": "sounds/sword1_sound.mp3"
     },
     {
         "id": 2,
         "image": "images/sword2.png",
         "damage": 15,
-        "price": 10
+        "price": 10,
+        "sound": "sounds/sword2_sound.mp3"
     },
     {
         "id": 3,
         "image": "images/sword3.png",
         "damage": 20,
-        "price": 20
+        "price": 20,
+        "sound": "sounds/sword3_sound.mp3"
     }
 ]

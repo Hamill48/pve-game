@@ -6,7 +6,8 @@
         "attack": 10,
         "health": 20,
         "award": 5,
-        "weapon": "images/ogre-weapon.png"
+        "weapon": "images/ogre-weapon.png",
+        "sound": "sounds/sword2_sound.mp3"
     },
     {
         "id": 2,
@@ -15,7 +16,8 @@
         "attack": 30,
         "health": 60,
         "award": 10,
-        "weapon": "images/witch-weapon.png" 
+        "weapon": "images/witch-weapon.png",
+        "sound": "sounds/arrow_sound.mp3"
     },
     {
         "id": 3,
@@ -24,6 +26,6 @@
         "attack": 50,
         "health": 100,
         "award": 15,
-        "weapon": "images/dragon-weapon.png"  
+        "weapon": "images/dragon_sound.mp3"  
     }
 ]

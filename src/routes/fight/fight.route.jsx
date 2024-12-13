@@ -26,6 +26,7 @@ const FightRoute = () => {
     const monsterAttack = selectedMonster.attack;
     const monsterAward = selectedMonster.award;
     const monsterWeaponImage = selectedMonster.weapon;
+    const monsterAttackSound = new Audio(selectedMonster.sound);
     const [currentMonsterHealth, setCurrentMonsterHealth] = useState(selectedMonster.health);
 
     // User
@@ -33,22 +34,8 @@ const FightRoute = () => {
     const { name, characterID, gold, weaponID, shieldID, health } = user;
     const [currentUserHealth, setCurrentUserHealth] = useState(health);
     const userAttack = weaponsData[weaponID - 1].damage;
-    const userShield = shieldsData[shieldID - 1].protection
-
-    // Játék menet
-
-    if (currentUserHealth <= 0) {
-        alert("Vesztettél!");
-        navigate("/dashboard");
-    }
-
-    if (currentMonsterHealth <= 0) {
-        alert(`Nyertél! A nyereményed: ${monsterAward} arany!`);
-        const updatedUser = { ...user, gold: gold + monsterAward  };
-        localStorage.setItem("user", JSON.stringify(updatedUser));
-        navigate("/dashboard");
-
-    }
+    const userShield = shieldsData[shieldID - 1].protection;
+    const attackSound = new Audio(weaponsData[weaponID - 1].sound);
 
     // Animáció állapota
     const [isAttacking, setIsAttacking] = useState(false);
@@ -59,9 +46,11 @@ const FightRoute = () => {
     
         setIsAttacking(true);
         console.log('attack');
+        attackSound.play();
         
         // Állapot visszaállítása a támadás végén
         setTimeout(() => {
+            
             console.log('end of the attack');
             setCurrentMonsterHealth(currentMonsterHealth - userAttack);
             monsterAttackHandler();
@@ -70,6 +59,7 @@ const FightRoute = () => {
 
     const monsterAttackHandler = () => {
         setIsMonsterAttacking(true);
+        monsterAttackSound.play();
         console.log('monster attack');
 
 
@@ -80,6 +70,24 @@ const FightRoute = () => {
             setIsAttacking(false);
         }, 800);
     };
+
+    // Játék menet
+
+    const [gameEnded, setGameEnded] = useState(false);
+
+    if (currentUserHealth <= 0 && !gameEnded) {
+        alert("Vesztettél!");
+        setGameEnded(true); // Jelzi, hogy a játék véget ért
+        navigate("/dashboard");
+    }
+    
+    if (currentMonsterHealth <= 0 && !gameEnded) {
+        alert(`Nyertél! A nyereményed: ${monsterAward} arany!`);
+        setGameEnded(true); // Jelzi, hogy a játék véget ért
+        const updatedUser = { ...user, gold: gold + monsterAward };
+        localStorage.setItem("user", JSON.stringify(updatedUser));
+        navigate("/dashboard");
+    }
 
     return (
         <div className="fight-route-container">
