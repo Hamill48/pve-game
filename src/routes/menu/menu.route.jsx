@@ -12,7 +12,7 @@ const Menu = () => {
         <div className='menu-container'>
             <h1 className="menu-title">PVP Game</h1>
             <Link to='/host'><Button style="primary" title="Belépés" /></Link>
-            <Button style="primary" title="Súgó"></Button>
+            <Link to='/help'><Button style="primary" title="Súgó"></Button></Link>
         </div>
     );
 };

@@ -8,6 +8,7 @@ import Dashboard from './routes/dashboard/dashboard.route';
 import CharacterRoute from './routes/character/character.route';
 import MonstersRoute from './routes/monsters/monsters.route';
 import FightRoute from './routes/fight/fight.route';
+import Help from './routes/help/help.route';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -30,6 +31,7 @@ function App() {
             <Route path='character' element={<CharacterRoute />}/>
             <Route path='monsters' element={<MonstersRoute />}/>
             <Route path='fight' element={<FightRoute />}/>
+            <Route path='help' element={<Help />}/>
           </Routes>
         </BrowserRouter>
       </UserProvider>
